@@ -3,13 +3,30 @@
 import { motion } from 'framer-motion'
 import { GitBranch, Download, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 
 export function Hero() {
   const [time, setTime] = useState<Date | null>(null)
   const [masteryHours, setMasteryHours] = useState<number>(0)
+  // Store the offset between local device time and global atomic time
+  const timeOffsetRef = useRef<number>(0)
 
   useEffect(() => {
+    // Fetch atomic world time to perfectly sync devices with drifted clocks
+    const syncWithWorldTime = async () => {
+      try {
+        const res = await fetch('https://worldtimeapi.org/api/timezone/Etc/UTC')
+        const data = await res.json()
+        const globalTime = new Date(data.utc_datetime).getTime()
+        const localTime = Date.now()
+        timeOffsetRef.current = globalTime - localTime
+      } catch (error) {
+        // Silently fallback to local clock if API fails
+      }
+    }
+    
+    syncWithWorldTime()
+
     // Globally synchronized mastery calculation based on ACTUAL real time
     // Set to roughly a few months ago so the counter is realistically tracking towards 10k
     const START_DATE = new Date('2026-02-01T00:00:00Z').getTime()
@@ -18,7 +35,9 @@ export function Hero() {
 
     const updateCalculations = () => {
       setTime(new Date())
-      const elapsedMs = Date.now() - START_DATE
+      // Use device time + the atomic offset to get perfectly true global time
+      const trueGlobalNow = Date.now() + timeOffsetRef.current
+      const elapsedMs = trueGlobalNow - START_DATE
       setMasteryHours(elapsedMs * MASTERY_PER_MS)
     }
 
