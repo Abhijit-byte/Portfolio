@@ -98,9 +98,9 @@ export function Hero() {
                   Resume
                 </Button>
               </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/Abhijit-byte/" target="_blank" rel="noopener noreferrer">
                 <Button variant="tertiary" size="icon-lg" aria-label="GitHub">
-                  <GitBranch className="w-5 h-5" />
+                  <Github className="w-5 h-5" />
                 </Button>
               </a>
             </motion.div>

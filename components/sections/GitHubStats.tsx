@@ -103,7 +103,7 @@ export function GitHubStats() {
           className="text-center mt-8"
         >
           <a
-            href="https://github.com"
+            href="https://github.com/Abhijit-byte/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block text-[#3b82f6] hover:text-[#2563eb] font-medium transition-colors"

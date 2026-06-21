@@ -9,17 +9,19 @@ interface SocialLink {
   name: string
   url: string
   icon: React.ReactNode
+  color?: string
 }
 
 const socialLinks: SocialLink[] = [
   {
     name: 'GitHub',
-    url: 'https://github.com',
-    icon: <GitBranch className="w-5 h-5" />,
+    url: 'https://github.com/Abhijit-byte/',
+    icon: <Github className="w-5 h-5" />,
+    color: 'hover:text-white hover:bg-[#333333]',
   },
   {
     name: 'LinkedIn',
-    url: 'https://linkedin.com',
+    url: 'https://www.linkedin.com/in/dashabhijit',
     icon: <Heart className="w-5 h-5" />,
   },
   {

@@ -54,7 +54,7 @@ export function Footer() {
             <h4 className="text-white font-semibold mb-4">Connect</h4>
             <div className="flex gap-4">
               <a
-                href="https://github.com"
+                href="https://github.com/Abhijit-byte/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#a3a3a3] hover:text-[#3b82f6] transition-colors"
@@ -63,7 +63,7 @@ export function Footer() {
                 <GitBranch className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/dashabhijit"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#a3a3a3] hover:text-[#3b82f6] transition-colors"
