@@ -3,6 +3,7 @@ import { Hero } from '@/components/sections/Hero'
 import { QuickSnapshot } from '@/components/sections/QuickSnapshot'
 import { ResumeSkills } from '@/components/sections/ResumeSkills'
 import { Projects } from '@/components/sections/Projects'
+import { LeetCodeStats } from '@/components/sections/LeetCodeStats'
 import { GitHubStats } from '@/components/sections/GitHubStats'
 import { Contact } from '@/components/sections/Contact'
 import { Footer } from '@/components/sections/Footer'
@@ -16,6 +17,7 @@ export default function Page() {
         <QuickSnapshot />
         <ResumeSkills />
         <Projects />
+        <LeetCodeStats />
         <GitHubStats />
         <Contact />
       </main>
