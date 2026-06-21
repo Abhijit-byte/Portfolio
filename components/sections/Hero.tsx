@@ -10,10 +10,11 @@ export function Hero() {
   const [masteryHours, setMasteryHours] = useState<number>(0)
 
   useEffect(() => {
-    // Globally synchronized mastery calculation
-    const START_DATE = new Date('2023-08-01T00:00:00Z').getTime()
-    // 2.5 hours of mastery gained per day -> 2.5 / 86,400,000 ms
-    const MASTERY_PER_MS = 0.000000028935
+    // Globally synchronized mastery calculation based on ACTUAL real time
+    // Set to roughly a few months ago so the counter is realistically tracking towards 10k
+    const START_DATE = new Date('2026-02-01T00:00:00Z').getTime()
+    // Exactly 1 hour of mastery gained per 1 hour of real time (1 / 3,600,000 ms)
+    const MASTERY_PER_MS = 1 / 3600000
 
     const updateCalculations = () => {
       setTime(new Date())
