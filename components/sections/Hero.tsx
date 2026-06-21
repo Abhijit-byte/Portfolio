@@ -116,7 +116,7 @@ export function Hero() {
             variants={itemVariants}
             initial="hidden"
             animate="visible"
-            className="flex justify-center lg:justify-end hidden md:flex"
+            className="flex justify-center lg:justify-end mt-12 lg:mt-0"
           >
             <div className="relative w-72 h-72 lg:w-96 lg:h-96">
               {/* Animated rings */}
@@ -163,7 +163,7 @@ export function Hero() {
                     Mastery
                   </span>
                   
-                  <div className="text-2xl lg:text-3xl font-mono font-bold text-white tracking-widest flex items-center shadow-black drop-shadow-md">
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-mono font-bold text-white tracking-widest flex items-center shadow-black drop-shadow-md">
                     <span className="text-cyan-400">
                       {masteryHours.toFixed(6)}
                     </span>
