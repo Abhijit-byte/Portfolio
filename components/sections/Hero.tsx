@@ -7,21 +7,25 @@ import { useEffect, useState } from 'react'
 
 export function Hero() {
   const [time, setTime] = useState<Date | null>(null)
-  const [masteryHours, setMasteryHours] = useState(2450.15)
+  const [masteryHours, setMasteryHours] = useState<number>(0)
 
   useEffect(() => {
-    setTime(new Date())
-    const timer = setInterval(() => setTime(new Date()), 1000)
-    
-    // Simulate active learning/coding hours ticking up
-    const masteryTimer = setInterval(() => {
-      setMasteryHours(prev => prev + 0.01)
-    }, 3000)
+    // Globally synchronized mastery calculation
+    const START_DATE = new Date('2023-08-01T00:00:00Z').getTime()
+    // 2.5 hours of mastery gained per day -> 2.5 / 86,400,000 ms
+    const MASTERY_PER_MS = 0.000000028935
 
-    return () => {
-      clearInterval(timer)
-      clearInterval(masteryTimer)
+    const updateCalculations = () => {
+      setTime(new Date())
+      const elapsedMs = Date.now() - START_DATE
+      setMasteryHours(elapsedMs * MASTERY_PER_MS)
     }
+
+    updateCalculations()
+    // Run at 50ms intervals for ultra-smooth high-precision ticking
+    const timer = setInterval(updateCalculations, 50)
+
+    return () => clearInterval(timer)
   }, [])
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -160,7 +164,7 @@ export function Hero() {
                   
                   <div className="text-2xl lg:text-3xl font-mono font-bold text-white tracking-widest flex items-center shadow-black drop-shadow-md">
                     <span className="text-cyan-400">
-                      {masteryHours.toFixed(2)}
+                      {masteryHours.toFixed(6)}
                     </span>
                   </div>
                   
