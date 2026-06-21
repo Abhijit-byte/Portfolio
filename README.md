@@ -1,33 +1,85 @@
-# Portfolio
+# 🚀 Abhijit Dash — Portfolio
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v0.app).
+A modern, high-performance developer portfolio built with **Next.js**, **React**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**.
 
-## Built with v0
+Designed to showcase my projects, technical skills, achievements, and journey as a Computer Science Engineering student passionate about **Full Stack Development**, **Artificial Intelligence**, and **Software Engineering**.
 
-This repository is linked to a [v0](https://v0.app) project. You can continue developing by visiting the link below -- start new chats to make changes, and v0 will push commits directly to this repo. Every merge to `main` will automatically deploy.
+## ✨ Features
 
-[Continue working on v0 →](https://v0.app/chat/projects/prj_AAdnfkx5bpckbv7d4zsQKs7543f3)
+* 🎨 Premium dark-themed UI inspired by modern product companies
+* ⚡ Smooth animations powered by Framer Motion
+* 🧩 Interactive bento-grid layouts
+* 💻 Responsive design for all devices
+* 🌌 Animated hero section with immersive effects
+* 📊 Recruiter-friendly quick snapshot dashboard
+* 🛠 Interactive skills showcase
+* 🚀 Project case studies with detailed insights
+* 📈 GitHub activity and development highlights
+* 📄 Resume download section
+* 📬 Contact and social links
 
-## Getting Started
+## 🛠 Tech Stack
 
-First, run the development server:
+### Frontend
+
+* Next.js
+* React
+* TypeScript
+* Tailwind CSS
+
+### Animation & UI
+
+* Framer Motion
+* Lucide React
+
+### Deployment
+
+* Vercel
+
+## 📂 Featured Projects
+
+### MannMitra
+
+AI-powered mental wellness platform focused on accessible and personalized support for students.
+
+### SkillLink
+
+A platform that connects individuals based on skills, collaboration opportunities, and learning interests.
+
+### Harvard HSIL Healthcare AI Project
+
+AI-driven preventive healthcare solution designed to identify and analyze cardiovascular risk factors.
+
+### QR Attendance Management System
+
+Automated attendance tracking system using QR technology for seamless event and classroom management.
+
+## 🎯 Areas of Interest
+
+* Full Stack Development
+* Artificial Intelligence & Machine Learning
+* Backend Engineering
+* Cloud Technologies
+* Software Architecture
+* Open Source
+
+## 📫 Connect With Me
+
+* GitHub: [Your GitHub Profile]
+* LinkedIn: [Your LinkedIn Profile]
+* Email: [Your Email]
+
+## 🚀 Running Locally
 
 ```bash
+git clone <repository-url>
+cd portfolio
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📄 License
 
-## Learn More
-
-To learn more, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [v0 Documentation](https://v0.app/docs) - learn about v0 and how to use it.
+This project is open source and available under the MIT License.
