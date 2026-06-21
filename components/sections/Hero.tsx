@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Github, Download, ArrowRight } from 'lucide-react'
+import { GitBranch, Download, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useEffect, useState } from 'react'
 
@@ -104,7 +104,7 @@ export function Hero() {
               </a>
               <a href="https://github.com/Abhijit-byte/" target="_blank" rel="noopener noreferrer">
                 <Button variant="tertiary" size="icon-lg" aria-label="GitHub">
-                  <Github className="w-5 h-5" />
+                  <GitBranch className="w-5 h-5" />
                 </Button>
               </a>
             </motion.div>

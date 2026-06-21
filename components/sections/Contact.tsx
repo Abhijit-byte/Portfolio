@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/Card'
-import { Mail, Heart, Github, Star } from 'lucide-react'
+import { Mail, Heart, GitBranch, Star } from 'lucide-react'
 
 interface SocialLink {
   name: string
@@ -16,7 +16,7 @@ const socialLinks: SocialLink[] = [
   {
     name: 'GitHub',
     url: 'https://github.com/Abhijit-byte/',
-    icon: <Github className="w-5 h-5" />,
+    icon: <GitBranch className="w-5 h-5" />,
     color: 'hover:text-white hover:bg-[#333333]',
   },
   {
