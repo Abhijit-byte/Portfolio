@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { Card, CardContent, CardTitle } from '@/components/ui/Card'
 import { Code2, TrendingUp } from 'lucide-react'
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/components/ui/button'
 
 interface LeetCodeStat {
   label: string
