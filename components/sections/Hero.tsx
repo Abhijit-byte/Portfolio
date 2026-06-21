@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { GitBranch, Download, ArrowRight } from 'lucide-react'
+import { Github, Download, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useEffect, useState } from 'react'
 

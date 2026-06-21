@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/Card'
-import { Mail, Heart, GitBranch, Star } from 'lucide-react'
+import { Mail, Heart, Github, Star } from 'lucide-react'
 
 interface SocialLink {
   name: string
