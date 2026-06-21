@@ -10,9 +10,21 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: 'Abhijit Dash - Full Stack Developer & AI/ML Enthusiast',
+  description: 'B.Tech Computer Science student. Full Stack Developer with expertise in React, Node.js, Python, and AI/ML. Internship ready for Summer 2026.',
+  keywords: ['Full Stack Developer', 'B.Tech CSE', 'React', 'Node.js', 'Python', 'AI/ML', 'FAANG Internship'],
+  authors: [{ name: 'Abhijit Dash' }],
   generator: 'v0.app',
+  openGraph: {
+    title: 'Abhijit Dash - Full Stack Developer',
+    description: 'B.Tech CSE student preparing for FAANG internships. Full Stack Developer with AI/ML expertise.',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Abhijit Dash - Full Stack Developer',
+    description: 'B.Tech CSE student. Full Stack Developer & AI/ML Enthusiast. Open to summer 2026 internships.',
+  },
   icons: {
     icon: [
       {
@@ -33,11 +45,14 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  colorScheme: 'light dark',
+  colorScheme: 'dark',
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
+    { media: '(prefers-color-scheme: dark)', color: '#0a0a0a' },
   ],
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
 }
 
 export default function RootLayout({
@@ -46,8 +61,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body className="font-sans antialiased">
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} dark`}>
+      <body className="bg-background text-foreground font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
